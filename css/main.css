@@ -338,6 +338,7 @@ address {
 .swiper-button-next::after {
   display: none;
 }
+
 .swiper-button-next {
   color: #fafafa33;
 }
@@ -347,6 +348,7 @@ address {
 /* Benefits styles */
 .benefits {
   padding-top: 32px;
+  padding-bottom: 32px;
 }
 .benefits-title {
   color: #fafafa33;
@@ -431,6 +433,135 @@ address {
   letter-spacing: -0.32px;
 }
 /* Benefits styles/ */
+/* Projects styles */
+
+.projects {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.projects-title {
+  margin-bottom: 32px;
+  color: #fafafa99;
+  font-family: "Inter Tight";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+  text-transform: uppercase;
+}
+.projects-swiper {
+  margin-top: 0;
+  height: auto;
+}
+.projects-swiper-slide {
+  height: auto;
+  width: 100%;
+  display: block;
+  border: none;
+  transition: none;
+}
+.projects-swiper-slide:hover,
+.projects-swiper-slide:focus {
+  background-color: transparent;
+}
+.project-info {
+  background-color: #fafafa;
+  padding: 32px;
+  border-radius: 24px 24px 0 0;
+}
+.project-info-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.project-info-item {
+  display: flex;
+  padding: 13px 18px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  border: 1px solid rgba(28, 29, 32, 0.2);
+  color: #1c1d20;
+  font-family: "Inter Tight";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+.project-info-title {
+  margin-top: 96px;
+  color: #1c1d20;
+  font-family: "Inter Tight";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 116.667% */
+  letter-spacing: -0.72px;
+}
+.project-info-button {
+  margin-top: 32px;
+  display: inline-flex;
+  padding: 13px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 60px;
+  background: #ed3b44;
+}
+.project-info-button-text {
+  color: #fafafa;
+}
+.project-preview {
+  padding: 100px 16px;
+  background: #242527;
+  border-radius: 0 0 24px 24px;
+}
+.project-swiper-wrapper {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 32px;
+}
+.projects-swiper-before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fafafa;
+  margin: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 60px;
+  border: 1px solid #fafafa33;
+}
+.projects-swiper-before.swiper-button-disabled,
+.projects-swiper-next.swiper-button-disabled {
+  opacity: 0.35;
+  pointer-events: none;
+  cursor: auto;
+}
+.swiper-button-before-svg {
+  width: 24px;
+  height: 24px;
+}
+.projects-swiper-next {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: #fafafa;
+  width: 52px;
+  height: 52px;
+  border-radius: 60px;
+  border: 1px solid #fafafa33;
+}
+.projects-swiper-next svg {
+  width: 24px;
+  height: 24px;
+}
+/* Projects styles/ */
 
 /* ======= TABLET STYLES ============= */
 
@@ -576,6 +707,27 @@ address {
   }
 
   /* Benefits section/ */
+  /* Projects section */
+
+  .project-info {
+    padding: 64px;
+  }
+  .project-info-title {
+    margin-top: 164px;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 44px; /* 100% */
+    letter-spacing: -1.32px;
+  }
+  .project-preview {
+    padding: 120px 45px;
+  }
+  .project-preview img {
+    width: 614px;
+    height: 385px;
+  }
+
+  /* Projects section */
 }
 
 @media screen and (min-width: 1368px) {
@@ -614,4 +766,36 @@ address {
   }
 
   /* Benefits section/ */
+  /* Projects section */
+  .projects-swiper-slide {
+    height: auto;
+    width: 100%;
+    display: flex;
+  }
+  .project-info {
+    padding: 64px;
+    border-radius: 24px 0 0 24px;
+  }
+  .project-info-title {
+    margin-bottom: 0;
+    margin-top: 225px;
+  }
+  .project-info-button {
+    padding: 18px 50px;
+  }
+  .project-info-button-text {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.32px;
+  }
+  .project-preview {
+    padding: 117px 28px;
+    border-radius: 0 24px 24px 0;
+  }
+  .project-preview img {
+    width: 614px;
+    height: 385px;
+  }
+
+  /* Projects section/ */
 }

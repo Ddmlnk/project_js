@@ -34,7 +34,7 @@ for (let btn of rotateBtn) {
 
 //  =======================About me swiper==============================
 
-const swiper = new Swiper('.swiper', {
+const aboutSwiper = new Swiper('.swiper', {
     loop: true,
     speed: 400,
     loopedSlides: 6,
@@ -44,6 +44,7 @@ const swiper = new Swiper('.swiper', {
         invert: false,
     },
     navigation: {
+        
         nextEl: '.swiper-button-next',
     },
     keyboard: {
@@ -51,6 +52,16 @@ const swiper = new Swiper('.swiper', {
         onlyInViewport: false,
     },
    
+});
+
+const projectsSwiper = new Swiper('.projects-swiper', {
+    loop: false,
+    speed: 400,
+    loopedSlides: 3,
+    navigation: {
+        prevEl: '.projects-swiper-before',
+        nextEl: '.projects-swiper-next',
+    },
 });
 
 
