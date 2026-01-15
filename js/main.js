@@ -53,6 +53,7 @@ const aboutSwiper = new Swiper('.swiper', {
     },
    
 });
+//  =======================Projects swiper==============================
 
 const projectsSwiper = new Swiper('.projects-swiper', {
     loop: false,
@@ -64,7 +65,9 @@ const projectsSwiper = new Swiper('.projects-swiper', {
     },
 });
 
+//  =======================FAQ accordion==============================
 
+new Accordion(".faq-accordion");
 
 
 

@@ -305,7 +305,7 @@ address {
   line-height: 24px !important; /* 150% */
   letter-spacing: -0.32px;
 }
-/* acordeon styles/ */
+/* acordion styles/ */
 /* swiper styles */
 .swiper {
   width: 100%;
@@ -562,6 +562,60 @@ address {
   height: 24px;
 }
 /* Projects styles/ */
+/* FAQ styles */
+.faq {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.faq-title {
+  margin-bottom: 32px;
+  color: #fafafa99;
+  font-family: "Inter Tight";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.32px;
+}
+.faq-ac {
+  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.faq-ac#ac-3 {
+  padding-top: 20px;
+  border-top: 1px solid #fafafa33;
+}
+.faq-ac-header {
+  display: flex;
+  align-items: start;
+}
+.faq-ac-header-title {
+  width: 265px;
+  margin-bottom: 0;
+  color: #fafafa;
+
+  /* Mobile/H5 */
+  font-family: "Inter Tight";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 150% */
+  letter-spacing: -0.4px;
+}
+.faq-ac-text {
+  color: #fafafa60 !important;
+
+  /* Mobile/Main text */
+  font-family: "Inter Tight";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.32px;
+}
+
+/* FAQ styles/ */
 
 /* ======= TABLET STYLES ============= */
 
@@ -728,6 +782,26 @@ address {
   }
 
   /* Projects section */
+  /* FAQ styles */
+  .faq {
+    padding-top: 64px;
+  }
+
+  .faq-ac {
+    padding-bottom: 24px;
+  }
+  .faq-ac#ac-3 {
+    padding-top: 32px;
+  }
+
+  .faq-ac-header-title {
+    width: 600px;
+  }
+  .faq-ac-text {
+    max-width: 650px;
+  }
+
+  /* FAQ styles/ */
 }
 
 @media screen and (min-width: 1368px) {
@@ -798,4 +872,48 @@ address {
   }
 
   /* Projects section/ */
+  /* FAQ styles */
+  .faq {
+    padding-top: 64px;
+  }
+  .faq-accordion {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .faq-ac {
+    width: 668px;
+    padding-bottom: 24px;
+  }
+  .faq-ac:nth-child(1) {
+    order: 1;
+    padding-top: 32px;
+    padding-right: 32px;
+    border-right: 1px solid #fafafa33;
+  }
+  .faq-ac:nth-child(2) {
+    order: 3;
+    padding-right: 32px;
+    border-right: 1px solid #fafafa33;
+  }
+  .faq-ac:nth-child(3) {
+    order: 5;
+    padding-right: 32px;
+    border-right: 1px solid #fafafa33;
+  }
+  .faq-ac:nth-child(4) {
+    order: 2;
+    padding-top: 32px;
+    padding-left: 32px;
+
+    border-top: 1px solid #fafafa33;
+  }
+  .faq-ac:nth-child(5) {
+    order: 4;
+    padding-left: 32px;
+  }
+  .faq-ac:nth-child(6) {
+    order: 6;
+    padding-left: 32px;
+  }
+  /* FAQ styles/ */
 }
