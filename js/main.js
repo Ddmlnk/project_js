@@ -69,6 +69,67 @@ const projectsSwiper = new Swiper('.projects-swiper', {
 
 new Accordion(".faq-accordion");
 
+//  =======================Covers codepen==============================
+
+// const myProjects = [
+//     {
+//         src: "/photos/content_img/rectangle_1.png",
+//         alt: "Powerpulse",
+//     },
+//     {
+//         src: "/photos/content_img/rectangle_2.png",
+//         alt: "Mimino",
+//     },
+//     {
+//         src: "/photos/content_img/rectangle_3.png",
+//         alt: "Vyshyvanka",
+//     },
+//     {
+//         src: "/photos/content_img/rectangle_4.png",
+//         alt: "Green.Harvest",
+//     },
+//     {
+//         src: "/photos/content_img/rectangle_5.png",
+//         alt: "Wallet",
+//     },
+//     {
+//         src: "/photos/content_img/rectangle_6.png",
+//         alt: "Chego",
+//     },
+//     {
+//         src: "/photos/content_img/rectangle_7.png",
+//         alt: "Energy.Flow",
+//     },
+//     {
+//         src: "/photos/content_img/rectangle_8.png",
+//         alt: "Fruitbox",
+//     },
+//     {
+//         src: "/photos/content_img/rectangle_9.png",
+//         alt: "Englishexcellence",
+//     },
+//     {
+//         src: "/photos/content_img/rectangle_10.png",
+//         alt: "Starlightstudio",
+//     },
+// ]
+
+// console.log('length =', myProjects.length)
+
+// let myProjectsContent = "";
+// myProjects.forEach(project => {
+//     myProjectsContent += `<img src="" alt="" class="marquee__line">`
+// })
+
+// const marqueeContainer = document.querySelector('.marquee__inner')
+// marqueeContainer.innerHTML = myProjectsContent;
+
+// const marqueePics = document.querySelectorAll(' .marquee__line')
+
+// for (let i = 0; i < myProjects.length; i++) {
+//     marqueePics[i].src = myProjects[i].src;
+// }
+
 
 
 
