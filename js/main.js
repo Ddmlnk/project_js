@@ -69,66 +69,38 @@ const projectsSwiper = new Swiper('.projects-swiper', {
 
 new Accordion(".faq-accordion");
 
-//  =======================Covers codepen==============================
+//  =======================Covers section==============================
 
-// const myProjects = [
-//     {
-//         src: "/photos/content_img/rectangle_1.png",
-//         alt: "Powerpulse",
-//     },
-//     {
-//         src: "/photos/content_img/rectangle_2.png",
-//         alt: "Mimino",
-//     },
-//     {
-//         src: "/photos/content_img/rectangle_3.png",
-//         alt: "Vyshyvanka",
-//     },
-//     {
-//         src: "/photos/content_img/rectangle_4.png",
-//         alt: "Green.Harvest",
-//     },
-//     {
-//         src: "/photos/content_img/rectangle_5.png",
-//         alt: "Wallet",
-//     },
-//     {
-//         src: "/photos/content_img/rectangle_6.png",
-//         alt: "Chego",
-//     },
-//     {
-//         src: "/photos/content_img/rectangle_7.png",
-//         alt: "Energy.Flow",
-//     },
-//     {
-//         src: "/photos/content_img/rectangle_8.png",
-//         alt: "Fruitbox",
-//     },
-//     {
-//         src: "/photos/content_img/rectangle_9.png",
-//         alt: "Englishexcellence",
-//     },
-//     {
-//         src: "/photos/content_img/rectangle_10.png",
-//         alt: "Starlightstudio",
-//     },
-// ]
+const coversSection = document.querySelector('.covers');
+const marquee = document.querySelectorAll('.marquee__line');
 
-// console.log('length =', myProjects.length)
+marquee.forEach(item => {
+    item.classList.add('is-playing')
+})
 
-// let myProjectsContent = "";
-// myProjects.forEach(project => {
-//     myProjectsContent += `<img src="" alt="" class="marquee__line">`
-// })
+const options = {
+  root: null,
+  threshold: 0.1
+};
 
-// const marqueeContainer = document.querySelector('.marquee__inner')
-// marqueeContainer.innerHTML = myProjectsContent;
+const observer = new IntersectionObserver((entires) => {
+    entires.forEach(entry => {
+        if (entry.isIntersecting) {
+            marquee.forEach(item => {
+                item.classList.add('is-playing')
+            })
+        } else {
+             marquee.forEach(item => {
+                item.classList.remove('is-playing')
+            })
+        }
+    })
+}, options)
 
-// const marqueePics = document.querySelectorAll(' .marquee__line')
-
-// for (let i = 0; i < myProjects.length; i++) {
-//     marqueePics[i].src = myProjects[i].src;
-// }
+const target = document.querySelector('.covers');
+if (target) {
+  observer.observe(target);
+}
 
 
 
