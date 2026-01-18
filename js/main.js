@@ -102,6 +102,53 @@ if (target) {
   observer.observe(target);
 }
 
+//  =======================Reviews section==============================
+
+const LINK = "https://portfolio-js.b.goit.study/api";
+const getReviews = "/reviews";
+
+
+function renderReviews(reviews) {
+    const reviewsList = document.querySelector('.reviews-swiper-wrapper ');
+    const markup = reviews.map(item => `
+        <div class="reviews-swiper-slide swiper-slide">
+            <div class="review-card">
+            <img src="${item.avatar_url}" alt="${item.author}" class="review-card-avatar">
+            <h3 class="review-card-author">${item.author}</h3>
+            <p class="review-card-text">${item.review}</p>
+          </div>
+        </div>
+          
+        `).join('');
+    reviewsList.innerHTML = markup;   
+}
+
+fetch(LINK + getReviews)
+    .then(response => response.json())
+    .catch(err => {
+        console.log('Помилка:', err);
+    })
+    .then(data => {
+        renderReviews(data)
+        const rojectsSwiper = new Swiper('.reviews-swiper', {
+            loop: false,
+            speed: 400,
+            navigation: {
+            prevEl: '.reviews-swiper-before',
+            nextEl: '.reviews-swiper-next',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,  
+                    spaceBetween: 16   
+                },
+                1280: {
+                    slidesPerView: 4, 
+                    spaceBetween: 16
+                    }
+                }
+        });
+    })
 
 
 
