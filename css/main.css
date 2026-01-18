@@ -794,6 +794,159 @@ address {
 }
 
 /* Reviews styles/ */
+/* Work together styles */
+.work-together {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.work-title {
+  margin-top: 32px;
+  margin-bottom: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.work-title-first-line,
+.work-title-second-line {
+  color: #fafafa;
+  font-family: "Inter Tight";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 100% */
+  letter-spacing: -1.2px;
+  text-transform: uppercase;
+}
+.work-form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.work-form label {
+  color: #fafafa60;
+  font-family: "Inter Tight";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.32px;
+}
+.work-form input {
+  width: 100%;
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid #fafafa20;
+}
+.work-form input:focus {
+  outline: none;
+  border-bottom: 1px solid #fafafa50;
+}
+.work-form-comment-label {
+  margin-top: 16px;
+}
+
+.work-form-button {
+  margin-top: 32px;
+  width: 100px;
+  height: 100px;
+  background-color: #ed3b44;
+  border-radius: 100px;
+
+  color: #fafafa;
+  font-family: "Inter Tight";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+.work-links {
+  display: flex;
+  margin-top: 64px;
+  gap: 4px;
+}
+.work-links-item {
+  display: flex;
+  padding: 10px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 60px;
+  border: 1px solid #fafafa20;
+  color: #fafafa;
+
+  /* Mobile/Text */
+  font-family: "Inter Tight";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.28px;
+}
+/* modal */
+
+.work-together-modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(15, 15, 16, 0.6);
+  height: 552px;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-up {
+  position: relative;
+  padding: 64px 32px;
+  margin: auto;
+  width: 343px;
+  border-radius: 20px;
+  border: 1px solid #fafafa10;
+  background-color: #1c1d20;
+}
+.pop-up-close-btn {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pop-up-close-btn-svg {
+  color: #fafafa;
+}
+.pop-up-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #fafafa;
+  text-align: center;
+  font-family: "Inter Tight";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 150% */
+  letter-spacing: -0.4px;
+}
+.pop-up-text {
+  color: #fafafa60;
+  text-align: center;
+  font-family: "Inter Tight";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.32px;
+}
+/* modal/ */
+
+/* Work together styles/ */
 
 /* ======= TABLET STYLES ============= */
 
@@ -1023,6 +1176,63 @@ address {
     border: 1px solid #fafafa20;
   }
   /* Reviews styles/ */
+  /* Work together styles */
+  .work-together {
+    padding-top: 48px;
+    padding-bottom: 169px;
+  }
+  .work-title {
+    margin-top: 80px;
+    width: 530px;
+  }
+  .work-title-first-line,
+  .work-title-second-line {
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 64px;
+    letter-spacing: -1.92px;
+  }
+  .work-title-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 24px;
+  }
+  .work-form {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .work-form input {
+    width: 245px;
+  }
+  .work-form-email,
+  .work-form-comment {
+    width: 245px;
+  }
+  .work-form-comment {
+    width: 245px;
+  }
+  .work-form-comment-label {
+    margin-top: 0;
+    width: 245px;
+  }
+
+  .work-form-button {
+    margin-top: 0px;
+    width: 150px;
+    height: 150px;
+  }
+  .work-links {
+    margin-top: 18px;
+  }
+  .work-links-item {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.32px;
+  }
+
+  /* Work together styles/ */
 }
 
 @media screen and (min-width: 1368px) {
@@ -1149,4 +1359,33 @@ address {
     height: 354px;
   }
   /* Reviews styles/ */
+  /* Work together styles */
+  .work-together {
+    padding-top: 82px;
+    padding-left: 164px;
+    padding-right: 164px;
+  }
+
+  .work-form {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .work-form input {
+    width: 390px;
+  }
+  .work-form-email,
+  .work-form-comment {
+    width: 390px;
+  }
+  .work-form-comment {
+    width: 390px;
+  }
+  .work-form-comment-label {
+    margin-top: 0;
+    width: 390px;
+  }
+
+  /* Work together styles/ */
 }

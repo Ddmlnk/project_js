@@ -140,11 +140,9 @@ fetch(LINK + getReviews)
             breakpoints: {
                 768: {
                     slidesPerView: 2,  
-                    spaceBetween: 16   
                 },
                 1280: {
                     slidesPerView: 4, 
-                    spaceBetween: 16
                     }
                 }
         });

@@ -60,7 +60,7 @@
       <div class="container">
         <h1 class="hero-title">
           Hello.<br />
-          I’m Fullstack developer Lloyd Jefferson.
+          I'm Fullstack developer Lloyd Jefferson.
         </h1>
         <ul class="hero-social-links">
           <li class="hero-social-links-item">
@@ -979,8 +979,6 @@
         <div class="reviews-swiper-wrapper swiper-wrapper">
           <!-- Slides -->
         </div>
-        <!-- If we need pagination -->
-
         <!-- If we need navigation buttons -->
         <div class="reviews-swiper-wrapper reviews-swiper-buttons">
           <div class="reviews-swiper-before swiper-button-before">
@@ -996,7 +994,50 @@
         </div>
       </div>
     </section>
-    <section class="work-together" id="work-together"></section>
+    <section class="work-together container" id="work-together">
+      <h2 class="work-title">
+        <img
+          width="44"
+          height="44"
+          src="/photos/content_img/logo.jpg"
+          alt="work_together_logo"
+          class="work-title-img"
+        /><span class="work-title-first-line"
+          >Let's <span class="marker-red">work</span></span
+        >
+        <span class="work-title-second-line">together</span>
+      </h2>
+      <form action="" class="work-form">
+        <div class="work-form-email">
+          <label for="person_comment">clients@gmail.com</label>
+          <input
+            required
+            name="person_email"
+            id="person_email"
+            type="email"
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          />
+        </div>
+        <div class="work-form-comment">
+          <label for="person_comment" class="work-form-comment-label"
+            >comments</label
+          >
+          <input
+            required
+            id="person_comment"
+            name="person_comment"
+            type="text"
+          />
+        </div>
+        <button type="submit" class="work-form-button">Send</button>
+      </form>
+      <ul class="work-links">
+        <li class="work-links-item">
+          <address>lloydjefferson@gmail.com</address>
+        </li>
+        <li class="work-links-item"><a href="">+380 11 1111 11 11</a></li>
+      </ul>
+    </section>
     <div class="mobile-menu">
       <button class="mobile-menu-close">
         <svg class="mobile-menu-close-svg" width="28" height="28">
@@ -1010,6 +1051,22 @@
         <li class="mobile-menu-nav-item"><a href="">FAQ</a></li>
       </ul>
       <button class="mobile-menu-order-btn">Order the project</button>
+    </div>
+    <div class="work-together-modal">
+      <div class="pop-up">
+        <button class="pop-up-close-btn">
+          <svg width="22" height="22" class="pop-up-close-btn-svg">
+            <use href="./photos/svg/sprite-2.svg#x"></use>
+          </svg>
+        </button>
+        <h5 class="pop-up-title">
+          Thank you for your interest in cooperation!
+        </h5>
+        <p class="pop-up-text">
+          The manager will contact you shortly to discuss further details and
+          opportunities for cooperation. Please stay in touch.
+        </p>
+      </div>
     </div>
     <script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
