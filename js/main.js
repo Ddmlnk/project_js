@@ -137,17 +137,62 @@ fetch(LINK + getReviews)
             prevEl: '.reviews-swiper-before',
             nextEl: '.reviews-swiper-next',
             },
-            breakpoints: {
+            breakpoints: {                
                 768: {
-                    slidesPerView: 2,  
-                },
+                    slidesPerView: 2, 
+                    spaceBetween: 16,
+                    },
                 1280: {
-                    slidesPerView: 4, 
+                  slidesPerView: 4, 
+                  spaceBetween: 16,
                     }
-                }
+            }
         });
     })
 
+//  =======================Work together section==============================
+  
+const postComments = "/requests"
+const workForm = document.querySelector('.work-form'); 
+const modalCloseBtn = document.querySelector('.pop-up-close-btn')
+const modalWindow = document.querySelector('.work-together-modal')
+const formSubmitBtn = document.querySelector('.work-form-button')
 
+function modalOpenHandler() {
+    modalWindow.classList.add('modal-is-open');
+    document.body.classList.add('no-scroll')
+}
+
+workForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = {
+        email: workForm.elements['person_email'].value,
+        comment: workForm.elements['person_comment'].value
+    };
+
+    fetch(LINK + postComments, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+    })
+    .then(response => {
+        if (!response.ok) throw new Error('Помилка сервера');
+        return response.json();
+    })
+    .then(data => {
+        modalOpenHandler();
+        workForm.reset();
+    })
+    .catch(error => {
+        alert('Something went wrong.'. error);
+    });
+});
+
+function modalCloseHandler() {
+    modalWindow.classList.remove('modal-is-open');
+    document.body.classList.remove('no-scroll')
+}
+
+modalCloseBtn.addEventListener('click', modalCloseHandler)
 
 

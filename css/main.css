@@ -833,8 +833,9 @@ address {
   letter-spacing: -0.32px;
 }
 .work-form input {
-  width: 100%;
+  width: 343px;
   background-color: transparent;
+  color: #fafafa;
   border-top: 0;
   border-right: 0;
   border-left: 0;
@@ -843,6 +844,9 @@ address {
 .work-form input:focus {
   outline: none;
   border-bottom: 1px solid #fafafa50;
+}
+.work-form-comment {
+  margin-top: 16px;
 }
 .work-form-comment-label {
   margin-top: 16px;
@@ -877,8 +881,6 @@ address {
   border-radius: 60px;
   border: 1px solid #fafafa20;
   color: #fafafa;
-
-  /* Mobile/Text */
   font-family: "Inter Tight";
   font-size: 14px;
   font-style: normal;
@@ -899,8 +901,18 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease;
+}
+.modal-is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.no-scroll {
+  overflow: hidden;
+}
 .pop-up {
   position: relative;
   padding: 64px 32px;
@@ -1231,7 +1243,20 @@ address {
     font-weight: 500;
     letter-spacing: -0.32px;
   }
+  /* modal */
 
+  .work-together-modal {
+    height: 636px;
+  }
+
+  .pop-up {
+    padding: 64px;
+    width: 492px;
+  }
+  .pop-up-title {
+    width: 364px;
+  }
+  /* modal/ */
   /* Work together styles/ */
 }
 
