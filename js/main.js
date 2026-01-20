@@ -158,6 +158,31 @@ const modalCloseBtn = document.querySelector('.pop-up-close-btn')
 const modalWindow = document.querySelector('.work-together-modal')
 const formSubmitBtn = document.querySelector('.work-form-button')
 
+//
+
+const emailInput = document.querySelector('#person_email');
+const helperText = document.querySelector('.input-helper-text');
+
+emailInput.addEventListener('input', () => {
+    if (emailInput.value.trim() === "") {
+        helperText.style.opacity = "0";
+        helperText.textContent = "";
+        return;
+    }
+
+    helperText.style.opacity = "1";
+
+    if (emailInput.checkValidity()) {
+        helperText.textContent = "Succes!";
+        helperText.style.color = "#3cbc81";
+    } else {
+        helperText.textContent = "Invalid email, try again";
+        helperText.style.color = "#ed3b44";
+    }
+});
+
+// 
+
 function modalOpenHandler() {
     modalWindow.classList.add('modal-is-open');
     document.body.classList.add('no-scroll')

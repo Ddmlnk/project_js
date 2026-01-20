@@ -829,7 +829,7 @@ address {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   letter-spacing: -0.32px;
 }
 .work-form input {
@@ -841,9 +841,29 @@ address {
   border-left: 0;
   border-bottom: 1px solid #fafafa20;
 }
+/*  */
+.input-helper-text {
+  display: block;
+  font-size: 14px;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#person_email:not(:placeholder-shown):invalid {
+  border-bottom-color: #ed3b44;
+}
+#person_email:not(:placeholder-shown):valid {
+  border-bottom-color: #3cbc81;
+}
+/*  */
 .work-form input:focus {
   outline: none;
   border-bottom: 1px solid #fafafa50;
+}
+.work-form-email {
+  position: relative;
 }
 .work-form-comment {
   margin-top: 16px;
@@ -1223,11 +1243,7 @@ address {
     width: 245px;
   }
   .work-form-comment {
-    width: 245px;
-  }
-  .work-form-comment-label {
-    margin-top: 0;
-    width: 245px;
+    margin-top: 0px;
   }
 
   .work-form-button {
