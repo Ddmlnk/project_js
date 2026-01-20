@@ -73,6 +73,7 @@ address {
 /* Mobile-menu styles */
 .mobile-menu {
   position: fixed;
+
   top: 0;
   left: 0;
   z-index: 999999;
@@ -87,12 +88,17 @@ address {
   transform: translateX(0);
 }
 .mobile-menu-close {
+  color: #fafafa;
   margin-top: 32px;
   margin-left: auto;
   margin-right: 16px;
   display: block;
   padding: 0;
   line-height: 0;
+}
+.mobile-menu-close:hover svg,
+.mobile-menu-close:focus svg {
+  color: #fafafa33;
 }
 .mobile-menu-nav {
   display: flex;
@@ -115,6 +121,11 @@ address {
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
+  transition: color 250ms linear;
+}
+.mobile-menu-nav-item:hover,
+.mobile-menu-nav-item:focus {
+  color: #ed3b44;
 }
 .mobile-menu-order-btn {
   display: flex;
@@ -136,6 +147,12 @@ address {
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.28px;
+
+  transition: background-color 300ms linear;
+}
+.mobile-menu-order-btn:hover,
+.mobile-menu-order-btn:focus {
+  background-color: #242527;
 }
 /* Mobile-menu styles */
 
@@ -166,13 +183,20 @@ address {
 .header-btn {
   display: none;
 }
-
+.mobile-menu-open {
+  color: #fafafa;
+}
+.mobile-menu-open:hover,
+.mobile-menu-open:focus {
+  color: #fafafa33;
+}
 /* Header/ */
 /* Hero styles */
 .hero {
   background-image: url("../photos/content_img/Hero-bg.png");
   background-size: cover;
   background-position: center;
+  padding-bottom: 32px;
 }
 .hero-title {
   padding-top: 281px;
@@ -249,8 +273,7 @@ address {
   text-transform: uppercase;
 }
 /* acordeon styles */
-.accordion-container {
-}
+
 .ac {
   background-color: transparent;
   box-sizing: border-box !important;
@@ -284,9 +307,12 @@ address {
   justify-content: center;
   align-items: center;
 }
+.ac-trigger:hover,
+.ac-trigger:focus {
+  border: 1px solid #fafafa !important;
+}
 .ac-trigger-svg {
   color: #fafafa;
-  /* transform: rotate(270deg); */
   transition: transform 250ms linear;
 }
 .ac-is-open {
@@ -296,8 +322,6 @@ address {
   padding-left: 0 !important;
   padding-bottom: 0 !important;
   color: #fafafa !important;
-
-  /* Mobile/Main text */
   font-family: "Inter Tight" !important;
   font-size: 16px !important;
   font-style: normal;
@@ -398,8 +422,6 @@ address {
 }
 .benefits-list-item-text {
   color: #fafafa99;
-
-  /* Mobile/Main text */
   font-family: "Inter Tight";
   font-size: 16px;
   font-style: normal;
@@ -886,6 +908,11 @@ address {
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.32px;
+  transition: background-color 250ms linear;
+}
+.work-form-button:focus,
+.work-form-button:hover {
+  background-color: #fafafa33;
 }
 .work-links {
   display: flex;
@@ -907,6 +934,11 @@ address {
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.28px;
+  transition: border 250ms linear;
+}
+.work-links-item:hover,
+.work-links-item:focus {
+  border: 1px solid #fafafa;
 }
 /* modal */
 
@@ -1000,8 +1032,6 @@ address {
   }
   .logo-span {
     color: #fafafa;
-
-    /* Desktop_tablet/Menu */
     font-family: "Inter Tight";
     font-size: 16px;
     font-weight: 500;
@@ -1012,12 +1042,40 @@ address {
     text-underline-position: from-font;
   }
   .header-nav {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    gap: 12px;
+    opacity: 0;
+    transition: opacity 400ms linear;
+  }
+  .header-nav-list-is-open {
+    opacity: 1;
+    transition: opacity 250ms linear;
+  }
+  .nav-list-item {
+    color: #fafafa;
+    font-family: "Inter Tight";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.32px;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
   }
   .nav-title {
     color: #fafafa;
-
-    /* Desktop_tablet/Menu */
     font-family: "Inter Tight";
     font-size: 16px;
     font-style: normal;
@@ -1030,6 +1088,11 @@ address {
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;
+    transition: color 250ms linear;
+  }
+  .nav-title:hover,
+  .nav-title:focus {
+    color: #ed3b44;
   }
   .header-btn {
     display: flex;
@@ -1040,11 +1103,14 @@ address {
     gap: 10px;
     border-radius: 60px;
     background: #ed3b44;
+    transition: background-color 250ms linear;
+  }
+  .header-btn:hover,
+  .header-btn:focus {
+    background-color: #fafafa33;
   }
   .header-btn-title {
     color: #fafafa;
-
-    /* Desktop_tablet/Btn_text */
     font-family: "Inter Tight";
     font-size: 16px;
     font-weight: 500;
@@ -1089,14 +1155,14 @@ address {
   }
   /* Hero section/ */
   /* About me section */
+  .about-me-wrapper {
+    margin-bottom: 64px;
+  }
   .about-me-description {
     width: 704px;
-
     padding: 64px 64px 436px 64px;
     margin-bottom: 16px;
     color: #fafafa;
-
-    /* Desktop_tablet/H4 */
     font-family: "Inter Tight";
     font-size: 38px;
     font-style: normal;
@@ -1253,11 +1319,13 @@ address {
   }
   .work-links {
     margin-top: 18px;
+    gap: 8px;
   }
   .work-links-item {
     font-size: 16px;
     font-weight: 500;
     letter-spacing: -0.32px;
+    padding: 18px 32px;
   }
   /* modal */
 

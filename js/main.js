@@ -3,8 +3,8 @@ const openMobileMenu = document.querySelector('.mobile-menu-open')
 const mobileMenu = document.querySelector('.mobile-menu')
 
 function openMenuHandler () {
-    console.log("hello world")
     mobileMenu.classList.add('is-open')
+    document.body.classList.add('no-scroll');
 
 }
 openMobileMenu.addEventListener('click', openMenuHandler)
@@ -12,12 +12,25 @@ openMobileMenu.addEventListener('click', openMenuHandler)
 const closeMobileMenu = document.querySelector('.mobile-menu-close')
 
 function closeMenuHandler() {
-    console.log("bye bye world")
     mobileMenu.classList.remove('is-open')
 
 }
 closeMobileMenu.addEventListener('click', closeMenuHandler)
 
+
+const menuLinks = document.querySelectorAll('.mobile-menu-nav-item'); 
+const menuOrderBtn = document.querySelector('.mobile-menu-order-btn')
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('is-open'); 
+    document.body.classList.remove('no-scroll');
+  });
+});
+menuOrderBtn.addEventListener('click',()=>{mobileMenu.classList.remove('is-open')})
+// ===================== Tablet/desktop menu =======================
+const menu = document.querySelector('.nav-title')
+const dropDownMenu = document.querySelector('.header-nav-list')
+menu.addEventListener('click',()=> {dropDownMenu.classList.toggle('header-nav-list-is-open')})
 // =====================About me accordion=====================================
 
 new Accordion(".accordion-container");
