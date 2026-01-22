@@ -145,7 +145,6 @@ fetch(LINK + getReviews)
         renderReviews(data)
         const rojectsSwiper = new Swiper('.reviews-swiper', {
             loop: false,
-            speed: 400,
             navigation: {
             prevEl: '.reviews-swiper-before',
             nextEl: '.reviews-swiper-next',

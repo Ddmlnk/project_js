@@ -79,7 +79,8 @@ address {
   z-index: 999999;
   width: 100%;
   height: 100%;
-  background-image: url("../photos/content_img/Hero-bg.png");
+  background-image: url(../photos/content_img/Hero-bg.png);
+  /* для background-image: прибрав лапки */
   background-size: cover;
   background-position: center;
   transform: translateX(-100%);
@@ -430,7 +431,7 @@ address {
   letter-spacing: -0.32px;
 }
 .benefits-button {
-  display: flex;
+  display: inline-flex;
   padding: 18px 36px;
   justify-content: center;
   align-items: center;
