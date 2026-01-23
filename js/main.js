@@ -13,6 +13,8 @@ const closeMobileMenu = document.querySelector('.mobile-menu-close')
 
 function closeMenuHandler() {
     mobileMenu.classList.remove('is-open')
+    document.body.classList.remove('no-scroll');
+
 
 }
 closeMobileMenu.addEventListener('click', closeMenuHandler)
